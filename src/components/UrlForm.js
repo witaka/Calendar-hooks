@@ -22,6 +22,7 @@ const UrlForm = props => {
 
     const formData = new FormData(currentTarget);
     const newUrl = formData.get("url");
+    updateLoading(true);
     if (newUrl) {
       Events.getFile(newUrl)
         .then(events => {
@@ -35,14 +36,7 @@ const UrlForm = props => {
           updateLoading(false);
         });
       currentTarget.reset();
-
-      console.log(props.location);
-      if (props.location.pathname === "/calendar") {
-        console.log("sfdsf");
-        refreshPage();
-      } else {
-        props.history.push("/calendar");
-      }
+      props.history.push("/calendar");
     }
   };
 
@@ -52,7 +46,7 @@ const UrlForm = props => {
         <p>Open Calendar from URL</p>
         <input id="url" name="url" type="link" />
         <Button color="inherit" variant="contained" type="submit">
-          Update
+          Open
         </Button>
       </form>
     </nav>

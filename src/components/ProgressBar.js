@@ -17,6 +17,7 @@ const LinearBuffer = () => {
         <LinearProgress
           variant="buffer"
           value={(events.length / 100) * totalEventsCount}
+          valueBuffer={0}
         />
         <br />
       </div>
