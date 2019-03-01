@@ -16,6 +16,20 @@ body {
     padding: 5px;
     width: 95%;
   }
+
+  .firstEvent h2 {
+    font-size: 8vw;
+  }
+
+  .firstEvent div > div h3 {
+    font-size: 6vw;
+  }
+  .firstEvent td:first-child {
+    width: 45%;
+  }
+  .firstEvent {
+    font-size: 1vw;
+  }
 }
 
 code {
